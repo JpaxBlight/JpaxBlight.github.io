@@ -25,6 +25,11 @@
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
 
+      // Ensure submitter email is set as the _replyto so autoresponse goes to the right address
+      let emailField = thisForm.querySelector('input[name="email"]');
+      let replyInput = thisForm.querySelector('input[name="_replyto"]');
+      if (emailField && replyInput) replyInput.value = emailField.value;
+
       let formData = new FormData( thisForm );
 
       if ( recaptcha ) {
@@ -64,11 +69,20 @@
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      let trimmed = data.trim();
+      let ok = false;
+      if (trimmed == 'OK') ok = true;
+      else {
+        try {
+          let json = JSON.parse(trimmed);
+          if (json.success === true || json.success == 'true') ok = true;
+        } catch(e) {}
+      }
+      if (ok) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
+        thisForm.reset();
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action);
       }
     })
     .catch((error) => {

@@ -129,7 +129,7 @@
                   <img src="assets/img/profile/profile-square.png" class="img-fluid" alt="">
                   <div class="status-indicator"></div>
                 </div>
-                <h3>Justine Patrick Alcomendas</h3>
+                <h3>Justine Patrick B. Alcomendas</h3>
                 <span class="role">Digital Illustrator</span>
                 <div class="rating">
                   <i class="bi bi-star-fill"></i>
@@ -158,7 +158,7 @@
 
               <div class="profile-actions">
                 <a href="https://drive.google.com/file/d/1btCQVQqhlWcKbqzBOB7kQd8f5mJIxSXt/view?usp=drive_link" class="btn-primary"><i class="bi bi-download"></i> Download CV</a>
-                <a href="https://gmail.com" class="btn-secondary"><i class="bi bi-envelope"></i> Contact</a>
+                <a href="#contact" class="btn-secondary"><i class="bi bi-envelope"></i> Contact</a>
               </div>
 
               <div class="social-connect">
@@ -615,9 +615,11 @@
             <li data-filter="*" class="filter-active">All Work</li>
             <li data-filter=".filter-creative">Digital Illustration</li>
             <li data-filter=".filter-digital">Digital Paint</li>
-            <!-- <li data-filter=".filter-digital">Product Design</li> -->
+            <li data-filter=".filter-product">Product Design</li>
             <li data-filter=".filter-illustration">Children Illustration</li>
             <li data-filter=".filter-T-shirt">T-Shirt Design</li>
+            <li data-filter=".filter-storyboard">Storyboard Design</li>
+            <li data-filter=".filter-comic">Comic Art</li>
           </ul>
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
@@ -700,7 +702,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
                   <img src="assets/img/portfolio/product-design/cover/IMG_4601.JPG" alt="Product Design" class="img-fluid" loading="lazy">
@@ -796,7 +798,7 @@
               </div>
             </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Storyboard">
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-storyboard">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
                   <img src="assets/img/portfolio/story-board/cover/san mig coffee dyip.jpeg" alt="Storyboard" class="img-fluid" loading="lazy">
@@ -829,7 +831,7 @@
             </div>
 
 
-                  <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-Storyboard">
+                  <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-comic">
               <div class="portfolio-card">
                 <div class="portfolio-image-container">
                   <img src="assets/img/portfolio/comics/cover/The Devil's Disguise.jpg" alt="Comic" class="img-fluid" loading="lazy">
@@ -949,23 +951,28 @@
                 <i class="bi bi-envelope"></i>
               </div>
               <div>
-                <h3>Email Me</h3>
-                <p>alcomendasjpax@gmail.com</p>
+                <a href="mailto:hello@example.com" class="contact-item">
+                  <h3>Email Me</h3>
+                    <p>alcomendasjpax@gmail.com<p>
+                  </a>
               </div>
             </div>
 
           </div>
 
-                  <div class="col-lg-8">
-          <form action="https://formsubmit.co/alcomendasjpax@gmail.com" method="POST" class="php-email-form">
-
-            <!-- FormSubmit hidden fields -->
+           <div class="col-lg-8">
+          <form action="https://formsubmit.co/ajax/alcomendasjpax@gmail.com" method="POST" class="php-email-form">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="https://JpaxBlight.github.io/">
+            <input type="hidden" name="_subject" value="New message from JpaxBlight Porfolio">
+            <!-- <input type="hidden" name="_autoresponse" value="Thanks for getting in touch! I will reply as soon as possible."> -->
+            <!-- Send a copy to site owner and set reply-to for autoresponse -->
+            <input type="hidden" name="_cc" value="alcomendasjpax@gmail.com">
+            <input type="hidden" name="_replyto" id="form_replyto" value=""> 
             <!-- optional: redirect after send -->
 
-            <div class="row gy-4">
+             <div class="row gy-4">
 
               <div class="col-md-6">
                 <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -987,10 +994,17 @@
                 <button type="submit">Send Message</button>
               </div>
 
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+
             </div>
           </form>
         </div>
 
+        
 
         </div>
 
