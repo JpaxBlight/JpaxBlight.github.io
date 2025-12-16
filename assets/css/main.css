@@ -2558,12 +2558,12 @@ section,
   color: #ffffff;
 }
 
-.portfolio-details .sidebar .share-card .social-links a.twitter {
+.portfolio-details .sidebar .share-card .social-links a.instagram {
   background: color-mix(in srgb, #1da1f2, transparent 90%);
   color: #1da1f2;
 }
 
-.portfolio-details .sidebar .share-card .social-links a.twitter:hover {
+.portfolio-details .sidebar .share-card .social-links a.instagram:hover {
   background: #1da1f2;
   color: #ffffff;
 }
