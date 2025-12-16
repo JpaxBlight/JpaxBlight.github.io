@@ -2578,15 +2578,15 @@ section,
   color: #ffffff;
 }
 
-.portfolio-details .sidebar .share-card .social-links a.pinterest {
+/* .portfolio-details .sidebar .share-card .social-links a.pinterest {
   background: color-mix(in srgb, #bd081c, transparent 90%);
   color: #bd081c;
-}
+} */
 
-.portfolio-details .sidebar .share-card .social-links a.pinterest:hover {
+/* .portfolio-details .sidebar .share-card .social-links a.pinterest:hover {
   background: #bd081c;
   color: #ffffff;
-}
+} */
 
 .portfolio-details .sidebar .tags-card .tags {
   display: flex;
